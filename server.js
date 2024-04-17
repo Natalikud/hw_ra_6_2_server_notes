@@ -39,7 +39,7 @@ router.post('/notes', async (ctx) => {
 });
 
 router.del('/notes/:id', async (ctx) => {
-  const id = ctx.request.url.replace('/notes/', '');
+  const id = ctx.request.url.replace('/notes/','');
   data.deleteNote(id);
 
   console.log(data.notes);
